@@ -1,0 +1,88 @@
+name: Bug report
+description: Something in CameraFX does not work as documented
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. **Do not attach the CameraFX addon, scripts or release ZIP** (commercial product). Screenshots, short clips, console output and your own snippets are fine.
+  - type: input
+    id: version
+    attributes:
+      label: CameraFX version
+      placeholder: "1.0.0 (see addons/camerafx/plugin.cfg)"
+    validations:
+      required: true
+  - type: input
+    id: godot
+    attributes:
+      label: Godot version
+      placeholder: "4.7.2 stable"
+    validations:
+      required: true
+  - type: input
+    id: platform
+    attributes:
+      label: OS and GPU
+      placeholder: "macOS 15 / Intel UHD 630"
+    validations:
+      required: true
+  - type: dropdown
+    id: renderer
+    attributes:
+      label: Renderer
+      options: [GL Compatibility, Mobile, Forward+, Not sure]
+    validations:
+      required: true
+  - type: dropdown
+    id: controller
+    attributes:
+      label: What moves your camera?
+      options:
+        - CharacterBody3D (camera is a child)
+        - RigidBody3D / VehicleBody3D
+        - Custom node with a velocity property
+        - Camera moved directly by script
+        - Other / manual feed_motion()
+    validations:
+      required: true
+  - type: dropdown
+    id: context
+    attributes:
+      label: Where does it happen?
+      options: [In the editor, Running from the editor, Exported build]
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, and what did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: "1. ...\n2. ..."
+    validations:
+      required: true
+  - type: textarea
+    id: settings
+    attributes:
+      label: CameraFX node settings
+      description: Preset, Motion Source, Reference Speed, any effects you changed. Screenshot of the Inspector is ideal.
+  - type: textarea
+    id: output
+    attributes:
+      label: Output / error messages
+      description: Messages starting with [CameraFX], and any script errors.
+      render: text
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checked
+      options:
+        - label: I read the Troubleshooting and Compatibility sections of the documentation
+          required: true
+        - label: I did not attach the CameraFX addon, scripts or ZIP
+          required: true

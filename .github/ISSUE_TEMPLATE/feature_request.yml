@@ -1,0 +1,26 @@
+name: Feature request
+description: Suggest an effect, preset, option or integration
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: want
+    attributes:
+      label: What would you like CameraFX to do?
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: What are you making, and why do you need it?
+      description: A use case helps a lot more than a solution.
+    validations:
+      required: true
+  - type: textarea
+    id: today
+    attributes:
+      label: What do you do today instead?
+      description: For example a custom CameraFXEffect, a shake preset, or manual feed_motion().
+  - type: input
+    id: godot
+    attributes:
+      label: Godot version

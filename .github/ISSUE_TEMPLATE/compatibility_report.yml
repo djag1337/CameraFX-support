@@ -1,0 +1,38 @@
+name: Compatibility report
+description: Tell us it works (or does not) on a setup the author has not tested
+labels: ["compatibility"]
+body:
+  - type: markdown
+    attributes:
+      value: "Only Godot 4.7.2 on macOS (GL Compatibility and Mobile) is verified by the author. Reports from other setups are welcome."
+  - type: input
+    id: godot
+    attributes:
+      label: Godot version
+    validations:
+      required: true
+  - type: input
+    id: platform
+    attributes:
+      label: OS and GPU
+    validations:
+      required: true
+  - type: dropdown
+    id: renderer
+    attributes:
+      label: Renderer
+      options: [GL Compatibility, Mobile, Forward+]
+    validations:
+      required: true
+  - type: dropdown
+    id: result
+    attributes:
+      label: Result
+      options: [Works fine, Works with problems, Does not work]
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Controller type, export mode, anything that behaved differently.
