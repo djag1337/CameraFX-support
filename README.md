@@ -17,7 +17,8 @@ Screenshots, short clips, console output and *your own* scene/script snippets ar
    * Jump/landing detection is exact only with `CharacterBody3D`; other bodies are estimated.
    * Exports must use "Export all resources in the project".
    * One CameraFX per camera.
-3. Search existing issues first.
+   * Physics interpolation (Godot 4.4+) on the camera currently hides the effects; see the [to-do list](TODO.md).
+3. Search existing issues first, and check the [to-do list](TODO.md) for known work.
 
 ## What helps most
 Godot version, OS and GPU, renderer, what your controller/camera setup looks like, the
