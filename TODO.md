@@ -4,8 +4,8 @@ What is being worked on or considered. This is a plain list, not a promise: ther
 
 Want something added or fixed? Open an issue using a template, or comment on the itch.io page.
 
-## In progress / confirmed
-- [ ] **Physics interpolation (Godot 4.4+):** with 3D physics interpolation enabled on the camera, CameraFX effects currently do not show up. Workaround for now: leave physics interpolation off for that camera. Needs a root-cause check, a fix and a regression test.
+## Fixed, waiting for the next update
+- [x] **Physics interpolation (Godot 4.4+):** effects were invisible with 3D physics interpolation enabled on the camera. Fixed and covered by a new render test; it will ship in the next update (not released yet). Until then: leave physics interpolation off for that camera. Known limit after the fix: nodes attached to the camera (view-models, flashlights) are not moved by the effect while interpolation is on.
 
 ## Needs testing (reports welcome)
 - [ ] Windows and Linux (so far only tested on macOS)
